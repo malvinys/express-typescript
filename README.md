@@ -1,6 +1,6 @@
-# qcorp-attendee-api-storage
+# express-typescript
 
-This project is storage api for Qcorp Attendee.
+This project is a storage api.
 
 ### How To Run This Project
 
