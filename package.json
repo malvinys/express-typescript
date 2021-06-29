@@ -7,13 +7,13 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rm -rf build/",
-    "build": "prebuild tsc",
-    "build:w": "prebuild tsc -w",
+    "build": "npm run prebuild && tsc",
+    "build:w": "npm run prebuild && prebuild tsc -w",
     "dev": "export NODE_ENV=DEV && nodemon ./build/index.js",
     "start": "export NODE_ENV=PROD && node ./build/index.js",
     "prebuild:windows": "IF EXIST build RMDIR /Q/S build",
-    "build:windows": "tsc",
-    "build:w:windows": "tsc -w",
+    "build:windows": "npm run prebuild:windows & tsc",
+    "build:w:windows": "npm run prebuild:windows & tsc -w",
     "dev:windows": "set NODE_ENV=DEV && nodemon ./build/index.js",
     "start:windows": "set NODE_ENV=PROD && node ./build/index.js"
   },
